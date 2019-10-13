@@ -1,4 +1,3 @@
-# protestify
-An app for organizing environmental movements
+Project to familiarize myself with the MERN stack
 
-MERN stack (MongoDB via Mongoose, Express, React, Node.js) augmented with GraphQL
+Technologies used: GraphQL, MongoDB via Mongoose, Express, React, Node.js, DataLoader

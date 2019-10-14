@@ -8,7 +8,7 @@ module.exports = {
     try {
       const existingUser = await User.findOne({ email: args.userInput.email })
         if (existingUser) {
-          throw new Error('User exists already.')
+          throw new Error('User already exists')
         }
       const hashedPassword = await bcrypt.hash(args.userInput.password, 12);
       const user = new User({
@@ -24,11 +24,11 @@ module.exports = {
   login: async ({email, password}) => {
     const user = await User.findOne({ email: email });
     if (!user) {
-      throw new Error('User does not exist !change to Invalid Credentials!');
+      throw new Error('Invalid Credentials!');
     }
     const isEqual = await bcrypt.compare(password, user.password);
     if (!isEqual) {
-      throw new Error('Password is incorrect !change to Invalid Credentials!');
+      throw new Error('Invalid Credentials!');
     }
     const token = jwt.sign({userId: user.id, email: user.email}, 'somesupersecretkeychangelater', {
       expiresIn: '1h'

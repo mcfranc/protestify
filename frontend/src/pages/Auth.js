@@ -5,7 +5,8 @@ import AuthContext from '../context/auth-context';
 
 class AuthPage extends Component {
   state = {
-    isLogin: true
+    isLogin: true,
+    regText: false
   }
 
   static contextType = AuthContext;
@@ -20,6 +21,10 @@ class AuthPage extends Component {
     this.setState(prevState => {
       return {isLogin: !prevState.isLogin}
     })
+  }
+
+  regTextHandler = () => {
+    this.setState({regText: true})
   }
 
   submitHandler = event => {
@@ -64,7 +69,6 @@ class AuthPage extends Component {
       };
     }
 
-
     fetch('http://localhost:8000/graphql', {
       method: 'POST',
       body: JSON.stringify(requestBody),
@@ -78,6 +82,10 @@ class AuthPage extends Component {
       return res.json();
     })
     .then(resData => {
+      if (resData.data.createUser) {
+        this.regTextHandler();
+        return;
+      }
       if (resData.data.login.token) {
         this.context.login(
           resData.data.login.token,
@@ -94,6 +102,9 @@ class AuthPage extends Component {
   render() {
     return (
       <form className="auth-form" onSubmit={this.submitHandler}>
+        <p>
+          {this.state.regText ? 'Registration success! Log in with your creds.' : ''}
+        </p>
         <div className="form-control">
           <label htmlFor="email">E-mail</label>
           <input type="email" id="email" ref={this.emailEl} />

@@ -9,12 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1.5px solid black;
 }
 
 .main-navigation__logo h1 {
   margin: 0;
-  font-size: 1.5rem;
-  color: white;
+  font-size: 2rem;
+  font-family: 'Bangers', cursive;
+  color: black;
 }
 
 .main-navigation__items {
@@ -36,10 +38,12 @@
 .main-navigation__items a,
 .main-navigation__items button {
   text-decoration: none;
-  color: #000000;
-  padding: 0.25rem 0.5rem;
-  border: none;
+  color: white;
   font: inherit;
+  font-weight: bolder;
+  padding: 0.35rem 1rem;
+  border: 1.5px solid white;
+  border-radius: 100px;
   background: transparent;
   cursor: pointer;
   vertical-align: middle;
@@ -52,6 +56,6 @@
 .main-navigation__items button:hover,
 .main-navigation__items button:active {
   background: #ffffff;
-  color: #fcba03;
-  border-radius: 5px;
+  color: black;
+  border: 1.5px solid black;
 }

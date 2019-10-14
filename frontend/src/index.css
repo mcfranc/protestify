@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Gudea', sans-serif;
 }
 
 .form-control label,
@@ -12,6 +12,7 @@ body {
 }
 
 .form-control label {
+  font-weight: bolder;
   margin-bottom: 0.5rem;
 }
 
@@ -19,23 +20,28 @@ body {
   margin-bottom: 1rem;
 }
 
+.form-control input {
+  border: 1.5px solid black;
+  padding: 0.5rem;
+}
+
 .form-actions button,
 .btn {
-  background: #fcba03;
+  background: white;
   font: inherit;
-  border: 1px solid #fcba03;
-  border-radius: 3px;
-  padding: 0.25rem 1rem;
-  margin-right: 1rem;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
-  color: white;
+  border: 1.5px solid black;
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  color: black;
+  font-weight: bolder;
   cursor: pointer;
+  margin: 0 0.5rem;
 }
 
 .form-actions button:hover,
 .form-actions button:active,
 .btn:hover,
 .btn:active {
-  background: #e3a700;
-  border-color: #e3a700;
+  background: #fcba03;
 }

@@ -1,24 +1,35 @@
 .events__list-item {
   margin: 1rem 0;
-  padding: 1rem;
-  border: 1px solid #fcba03;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.events__list-item h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #fcba03;
+  border: 1.5px solid black;
+  width: 20rem;
 }
 
 .events__list-item h2 {
   margin: 0;
   font-size: 1rem;
-  color: #a6a6a6;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-.events__list-item p {
+.events__list-item-header {
+  background: #fcba03;
+  border-bottom: 1.5px solid black;
+  padding: 0.5rem;
+}
+
+.events__list-item-header h1 {
   margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Bangers', cursive;
+  color: black;
+}
+
+.events__list-item-body {
+  background: white;
+  padding: 0.5rem;
+}
+
+.events__list-item-footer {
+  text-align: right;
+  border-top: 1.5px solid black;
+  padding: 0.5rem;
 }

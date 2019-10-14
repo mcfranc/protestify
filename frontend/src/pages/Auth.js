@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 
 import './Auth.css';
 import AuthContext from '../context/auth-context';
@@ -114,7 +116,7 @@ class AuthPage extends Component {
           <input type="password" id="password" ref={this.passwordEl} />
         </div>
         <div className="form-actions">
-          <button type="submit">Submit</button>
+          <button type="submit">Submit &nbsp;<FontAwesomeIcon icon={faAngleDoubleRight} /></button>
           <button type="button" onClick={this.switchModeHandler}>Switch to {this.state.isLogin ? 'Sign-up' : 'Sign-in'}</button>
         </div>
       </form>

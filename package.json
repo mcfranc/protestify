@@ -27,6 +27,7 @@
     "graphql": "^14.5.8",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.4",
+    "nodemon": "^1.19.3",
     "react-chartjs": "^1.2.0",
     "typeface-bangers": "0.0.72",
     "typeface-gudea": "0.0.61"
@@ -35,7 +36,6 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
-    "nodemon": "^1.19.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-node-externals": "^1.7.2"

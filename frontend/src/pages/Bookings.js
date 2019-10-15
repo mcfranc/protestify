@@ -5,6 +5,7 @@ import AuthContext from '../context/auth-context';
 import BookingList from '../components/Bookings/BookingList/BookingList';
 import BookingsChart from '../components/Bookings/BookingsChart/BookingsChart';
 import BookingsControls from '../components/Bookings/BookingsControls/BookingsControls';
+import Header from '../components/Header/Header';
 
 class BookingsPage extends Component {
   state = {
@@ -117,6 +118,7 @@ class BookingsPage extends Component {
     if (!this.state.isLoading) {
       content = (
         <React.Fragment>
+          <Header />
           <BookingsControls
             activeOutputType={this.state.outputType}
             onChange={this.changeOutputTypeHandler}

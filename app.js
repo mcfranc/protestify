@@ -9,6 +9,8 @@ const isAuth = require('./middleware/is-auth');
 
 const app = express();
 
+let port = process.env.PORT;
+
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
@@ -37,7 +39,10 @@ mongoose
   `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-k22ul.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(8000);
+    if (port == null || port == "") {
+      port = 8000;
+    }
+    app.listen(port);
   })
   .catch(err => {
     console.log(err);

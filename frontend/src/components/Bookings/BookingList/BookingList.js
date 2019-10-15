@@ -8,7 +8,7 @@ const bookingList = props => (
       return (
         <li key={booking._id} className="bookings__item">
           <div className="bookings__item-data">
-            {booking.event.title} - {new Date(booking.createdAt).toLocaleDateString()}
+            <p>{new Date(booking.createdAt).toLocaleDateString()} - {booking.event.title}</p>
           </div>
           <div className="bookings__item-actions">
             <button className="btn" onClick={props.onDelete.bind(this, booking._id)}>Cancel</button>

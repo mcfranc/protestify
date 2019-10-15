@@ -265,7 +265,7 @@ class EventsPage extends Component {
             </p>
           </Modal>
         )}
-        <Header />
+        <Header title="Join the movement" subtitle="Mobilize for the environment. Find a protest near you." />
         {this.context.token && (
           <div className="events-control">
             <button className="btn" onClick={this.startCreateEventHandler}>Create Event</button>

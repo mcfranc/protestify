@@ -105,7 +105,7 @@ class AuthPage extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <Header title="Welcome, comrade" subtitle="Let your presence be known" />
         <div className="auth-form-container">
           <form className="auth-form" onSubmit={this.submitHandler}>
             <h1>

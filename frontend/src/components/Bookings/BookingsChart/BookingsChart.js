@@ -4,15 +4,15 @@ import { Bar as BarChart } from 'react-chartjs';
 const BOOKINGS_BUCKETS = {
   'Cheap': {
     min: 0,
-    max: 100
+    max: 1
   },
   'Medium': {
-    min: 100,
-    max: 200
+    min: 1,
+    max: 5
   },
   'Expensive': {
-    min: 200,
-    max: 1000000000
+    min: 5,
+    max: 10
   }
 };
 

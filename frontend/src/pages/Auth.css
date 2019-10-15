@@ -1,6 +1,7 @@
 .auth-form-container {
-  max-width: 70%;
-  min-width: 22rem;
+  max-width: 80rem;
+  width: 100%;
+  min-width: 20rem;
   margin: 0 auto;
   padding: 0;
   background: #f2f2f2;
@@ -10,11 +11,29 @@
 .auth-form {
   width: 25rem;
   max-width: 80%;
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 
 .auth-form p {
   margin: 0 0 1rem 0;
-  font-size: 1
-  1rem;
+  font-size: 1rem;
+}
+
+
+@media (min-width: 600px) {
+  .auth-form-container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .auth-form-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .auth-form-container {
+    width: 70%;
+  }
 }

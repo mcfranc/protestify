@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1.5px solid black;
+  z-index: 1;
 }
 
 .main-navigation__logo h1 {

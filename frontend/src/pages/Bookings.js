@@ -118,20 +118,22 @@ class BookingsPage extends Component {
     if (!this.state.isLoading) {
       content = (
         <React.Fragment>
-          <Header />
-          <BookingsControls
-            activeOutputType={this.state.outputType}
-            onChange={this.changeOutputTypeHandler}
-          />
-          <div>
-            {this.state.outputType === 'list' ? (
-              <BookingList
-                bookings={this.state.bookings}
-                onDelete={this.deleteBookingHandler}
-              />
-            ) : (
-              <BookingsChart bookings={this.state.bookings} />
-            )}
+          <Header title="Your dashboard" subtitle="Manage your busy protest schedule" />
+          <div className="bookings__container">
+            <BookingsControls
+              activeOutputType={this.state.outputType}
+              onChange={this.changeOutputTypeHandler}
+            />
+            <div className="bookings__list-container">
+              {this.state.outputType === 'list' ? (
+                <BookingList
+                  bookings={this.state.bookings}
+                  onDelete={this.deleteBookingHandler}
+                />
+              ) : (
+                <BookingsChart bookings={this.state.bookings} />
+              )}
+            </div>
           </div>
         </React.Fragment>
       );

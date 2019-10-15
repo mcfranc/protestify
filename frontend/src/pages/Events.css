@@ -2,10 +2,11 @@
   background: transparent;
   position: absolute;
   left: 50%;
-  margin-left: -65px;
-  margin-top: 24px;
+  margin-left: -5.5rem;
+  margin-top: 1rem;
+  z-index: 0;
 }
 
 .events-control .btn {
-  width: 130px;
+  width: 10rem;
 }

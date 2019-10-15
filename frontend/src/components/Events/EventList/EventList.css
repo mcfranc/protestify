@@ -1,6 +1,7 @@
 .event__list {
-  max-width: 70%;
-  min-width: 22rem;
+  max-width: 80rem;
+  width: 100%;
+  min-width: 20rem;
   margin: 0rem auto 10rem auto;
   list-style: none;
   padding: 0;
@@ -9,5 +10,24 @@
   justify-content: center;
   background: #f2f2f2;
   border: 1px solid #d1d1d1;
-  padding-top: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 600px) {
+  .event__list {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .event__list {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .event__list {
+    width: 70%;
+  }
 }

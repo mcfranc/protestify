@@ -2,10 +2,12 @@ import React from 'react';
 
 import './Header.css';
 
-const header = () => (
+const header = props => (
   <div className="header">
-    <h1>Join the movement</h1>
-    <h3>Protestify is a platform to mobilize for the environment. Find an event near you.</h3>
+    <div>
+      <h1>{props.title}</h1>
+      <h3>{props.subtitle}</h3>
+    </div>
   </div>
 );
 

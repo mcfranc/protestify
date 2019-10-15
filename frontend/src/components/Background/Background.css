@@ -1,0 +1,23 @@
+.background {
+  top: 0;
+  left: 0;
+  height: 25rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./events_background.jpg");
+  z-index: -150;
+  position: absolute;
+}
+
+.background-overlay {
+  top: 0;
+  left: 0;
+  height: 25rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -149;
+  position: absolute;
+  border-bottom: 1px solid #d1d1d1;
+}

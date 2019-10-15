@@ -2,6 +2,7 @@
   width: 90%;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border: 1.5px solid black;
   position: fixed;
   top: 20vh;
   left: 5%;
@@ -11,16 +12,35 @@
 .modal__header {
   padding: 1rem;
   background: #fcba03;
-  color: white;
+  border-bottom: 1.5px solid black;
 }
 
 .modal__header h1 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-family: 'Bangers', cursive;
+  color: black;
+}
+
+.modal__header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Bangers', cursive;
+  color: black;
 }
 
 .modal__content {
   padding: 1rem;
+}
+
+.modal__content h3 {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.modal__content p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
 
 .modal__actions {

@@ -4,6 +4,7 @@ import Modal from '../components/Modal/Modal';
 import Backdrop from '../components/Backdrop/Backdrop';
 import EventList from '../components/Events/EventList/EventList';
 import Spinner from '../components/Spinner/Spinner';
+import Header from '../components/Header/Header';
 import AuthContext from '../context/auth-context';
 import './Events.css';
 
@@ -255,18 +256,18 @@ class EventsPage extends Component {
             onConfirm={this.bookEventHandler}
             confirmText={this.context.token ? 'Book' : 'Confirm'}
           >
-            <h1>{this.state.selectedEvent.title}</h1>
-            <h2>
-              £{this.state.selectedEvent.price} - {new Date(this.state.selectedEvent.date).toLocaleDateString()}
-            </h2>
+            <h3>Date: {new Date(this.state.selectedEvent.date).toLocaleDateString()}</h3>
+            <h3>Contribution: £{this.state.selectedEvent.price}</h3>
+            <h3>Location: {['Hyde Park', 'Westminster', 'Trafalgar Square'][Math.floor(Math.random()*3)]}</h3>
+            <h3>Attendees: {Math.floor(Math.random() * 1000)}</h3>
             <p>
               {this.state.selectedEvent.description}
             </p>
           </Modal>
         )}
+        <Header />
         {this.context.token && (
           <div className="events-control">
-            <p>Create your own event:</p>
             <button className="btn" onClick={this.startCreateEventHandler}>Create Event</button>
           </div>
         )}

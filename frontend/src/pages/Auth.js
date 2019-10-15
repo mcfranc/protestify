@@ -4,6 +4,7 @@ import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 
 import './Auth.css';
 import AuthContext from '../context/auth-context';
+import Header from '../components/Header/Header';
 
 class AuthPage extends Component {
   state = {
@@ -103,23 +104,31 @@ class AuthPage extends Component {
 
   render() {
     return (
-      <form className="auth-form" onSubmit={this.submitHandler}>
-        <p>
-          {this.state.regText ? 'Registration success! Log in with your creds.' : ''}
-        </p>
-        <div className="form-control">
-          <label htmlFor="email">E-mail</label>
-          <input type="email" id="email" ref={this.emailEl} />
+      <React.Fragment>
+        <Header />
+        <div className="auth-form-container">
+          <form className="auth-form" onSubmit={this.submitHandler}>
+            <h1>
+              {this.state.isLogin ? 'Sign In' : 'Sign Up'}
+            </h1>
+            <p>
+              {this.state.regText ? 'Sign up successful! Try logging in with your credentials.' : ''}
+            </p>
+            <div className="form-control">
+              <label htmlFor="email">E-mail</label>
+              <input type="email" id="email" ref={this.emailEl} />
+            </div>
+            <div className="form-control">
+              <label htmlFor="password">Password</label>
+              <input type="password" id="password" ref={this.passwordEl} />
+            </div>
+            <div className="form-actions">
+              <button type="submit">Submit &nbsp;<FontAwesomeIcon icon={faAngleDoubleRight} /></button>
+              <button type="button" onClick={this.switchModeHandler}>Switch to {this.state.isLogin ? 'Sign Up' : 'Sign In'}</button>
+            </div>
+          </form>
         </div>
-        <div className="form-control">
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" ref={this.passwordEl} />
-        </div>
-        <div className="form-actions">
-          <button type="submit">Submit &nbsp;<FontAwesomeIcon icon={faAngleDoubleRight} /></button>
-          <button type="button" onClick={this.switchModeHandler}>Switch to {this.state.isLogin ? 'Sign-up' : 'Sign-in'}</button>
-        </div>
-      </form>
+      </React.Fragment>
     );
   }
 }

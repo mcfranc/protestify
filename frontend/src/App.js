@@ -6,6 +6,7 @@ import BookingsPage from './pages/Bookings'
 import EventsPage from './pages/Events'
 import MainNavigation from './components/Navigation/MainNavigation';
 import AuthContext from './context/auth-context';
+import Background from './components/Background/Background';
 
 import './App.css';
 
@@ -34,6 +35,7 @@ class App extends Component {
               login: this.login,
               logout: this.logout
             }}>
+            <Background />
             <MainNavigation />
             <main className="main-content">
               <Switch>
@@ -42,7 +44,7 @@ class App extends Component {
                 {!this.state.token && <Route path="/auth" component={AuthPage} />}
                 <Route path="/events" component={EventsPage} />
                 {this.state.token && <Route path="/bookings" component={BookingsPage} />}
-                {!this.state.token && <Redirect to="/auth" exact />}
+                {!this.state.token && <Redirect to="/events" exact />}
               </Switch>
             </main>
           </AuthContext.Provider>
@@ -51,6 +53,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;

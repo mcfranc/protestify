@@ -10,7 +10,7 @@ const eventItem = props => (
   <div className="events__list-item-body">
     <h2>Date: {new Date(props.date).toLocaleDateString()}</h2>
     <h2>Contribution: £{props.price}</h2>
-    <h2>Location: {['Hyde Park, London, UK', 'Westminster, London, UK', 'Trafalgar Square, London, UK'][Math.floor(Math.random()*3)]}</h2>
+    <h2>Location: {['Hyde Park', 'Westminster', 'Trafalgar Square'][Math.floor(Math.random()*3)]}</h2>
     <h2>Attendees: {Math.floor(Math.random() * 1000)}</h2>
   </div>
   <div className="events__list-item-footer">

@@ -1,8 +1,11 @@
 .events-control {
-  text-align: center;
-  border: 1px solid #fcba03;
-  padding: 1rem;
-  margin: 2rem auto;
-  width: 30rem;
-  max-width: 80%;
+  background: transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  margin-top: 24px;
+}
+
+.events-control .btn {
+  width: 130px;
 }

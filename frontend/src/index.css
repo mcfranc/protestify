@@ -7,7 +7,7 @@ body {
 .form-control label,
 .form-control input,
 .form-control textarea {
-  width: 100%;
+  width: 96%;
   display: block;
 }
 
@@ -22,7 +22,12 @@ body {
 
 .form-control input {
   border: 1.5px solid black;
-  padding: 0.5rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.form-control textarea {
+  border: 1.5px solid black;
+  padding: 0.5rem 0.25rem;
 }
 
 .form-actions button,

@@ -1,13 +1,8 @@
 .events__list-item {
-  margin: 1rem 0;
   border: 1.5px solid black;
-  width: 20rem;
-}
-
-.events__list-item h2 {
-  margin: 0;
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.8);
+  min-width: 20rem;
+  max-width: 30rem;
+  margin: 1rem;
 }
 
 .events__list-item-header {
@@ -28,8 +23,23 @@
   padding: 0.5rem;
 }
 
+.events__list-item-body h2 {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .events__list-item-footer {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: white;
   border-top: 1.5px solid black;
   padding: 0.5rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+}
+
+.events__list-item-footer p {
+  margin: 0 auto;
 }

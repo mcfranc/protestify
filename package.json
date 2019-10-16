@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm start\" \"cd frontend && npm install && yarn build\""
+    "start": "concurrently \"nodemon app.js\" \"cd frontend && npm install && yarn build\""
   },
   "author": "",
   "license": "ISC",
